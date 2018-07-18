@@ -1,0 +1,931 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+  <link rel="stylesheet" href="./css/style.css">
+  <title>Guild Welfare Mental Health</title>
+</head>
+
+<body>
+
+  <!-- Web Header Starts -->
+  <div class="web_header">
+    <div class="header_icon">
+      <img src="./img/welfare-icon.png" alt="welfare_icon" width=60px height=60px>
+    </div>
+    <div class="header_word">
+      <p id="header_part1">GUILD WELFARE</p>
+      <p id="header_part2">MENTAL HEALTH DIRECTORY</p>
+    </div>
+    <!-- Web Header Ends -->
+  </div>
+
+
+  <!-- Question Box -->
+  <div class="question-box">
+
+    <div id="q1" class="question">
+      <p>Are you (or someone you know) experiencing problems with your (their) mental wellbeing and are looking for support? </p>
+      <button class="button" onClick="smoothScroll('q2')">Yes</button>
+    </div>
+
+    <div id="q2" class="question">
+      <p>Are you (or someone you know) currently facing an emergency or crisis situation, or is there the possibility that immediate harm could come to yourself (or others)?</p>
+      <button class="button" onClick="smoothScroll('crisis_supports')">Yes</button>
+      <button class="button" onClick="smoothScroll('q3')">No</button>
+    </div>
+
+    <div id="q3" class="question">
+      <p>Are you looking for support services for general or specific mental health issues?</p>
+      <button class="button" onClick="smoothScroll('q4');">General</button>
+      <button class="button" onClick="smoothScroll('q5');">Specific</button>
+    </div>
+
+    <div id="q4" class="question">
+      <p>Are you looking for services on-campus, off-campus or online?</p>
+      <button class="button" onClick="smoothScroll('on_campus');">On-Campus</button>
+      <button class="button" onClick="smoothScroll('off_campus');">Off-Campus</button>
+      <button class="button" onClick="smoothScroll('online');">Online</button>
+    </div>
+
+    <div id="q5" class="question">
+      <p>What specific mental health issue(s) are you concerned about?</p>
+      <button class="button" onClick="function_q5('depression');">Depression/Anxiety</button>
+      <button class="button" onClick="function_q5('trauma');">Trauma/PTSD/Assault</button>
+      <button class="button" onClick="function_q5('eating');">Eating/Weight-related Disorders</button>
+      <button class="button" onClick="function_q5('alcohol');">Alcohol And Other Drugs</button>
+      <button class="button" onClick="function_q5('LGBTIQA');">LGBTIQA</button>
+      <button class="button" onClick="function_q5('relationships');">Relationships</button>
+      <button class="button" onClick="function_q5('wellbeing');">General Wellbeing/Health</button>
+      <button class="button" onClick="function_q5('schizophrenia');">Schizophrenia</button>
+      <button class="button" onClick="function_q5('personality');">Personality Disorders</button>
+    </div>
+
+    <div id="q6" class="question">
+      <p>Are you looking for services off-campus or online?</p>
+      <button class="button" onClick="function_q6('Off-campus');">Off-campus</button>
+      <button class="button" onClick="function_q6('Online');">Online</button>
+
+    </div>
+    <!-- Question Box Ends -->
+  </div>
+
+  <!-- Crisis Supports Part Starts -->
+  <div id="crisis_supports" class="content">
+    <ul>
+      <li>Lifeline:<b>13 11 14</b></li>
+      <li>Mental Health Emergency Response Line: <b>1300 555 788 (Metro)</b></li>
+      <li>National Emergency Number: <b>000</b></li>
+      <li>Samaritans Crisis Line: <b>08 9381 5555 (Main Line)</b></li>
+      <li>Samaritans Crisis Line: <b>08 9388 2500 (Youth Line)</b></li>
+      <li>Samaritans Crisis Line: <b>1800 198 313 (Country Toll Free)</b></li>
+      <li>Men's Line: <b>1300 789 978</b></li>
+    </ul>
+    <!-- Crisis Supports Part Ends -->
+  </div>
+
+  <!-- On-Campus Starts -->
+  <div id="on_campus">
+    <div class="center-align">
+      <header class="lv1title"><b>On Campus Services</b></header>
+    </div>
+
+    <h1 class="lv2title"><b>Free Services</b></h1>
+
+    <div class="row">
+
+      <div id="student_assist" class="col l4 s12">
+        <div class="card-box">
+          <ul class="card-list">
+            <li class="sub_header">
+              <h2>STUDENT ASSIST</h2></li>
+            <li>Team of independent social workers and counsellors, confidential and with a low barrier of entry</li>
+            <li class="blue"><i><b>PH: (+61) 8 6488 2295</b></i></li>
+            <li class="blue"><i><b>WEB: <a href="https://bit.ly/uwaguildsa" target="_blank">https://bit.ly/uwaguildsa</a></b></i></li>
+            <li class="blue"><i><b>ADDRESS: Guild Student Centre, Ground Floor, Guild Village</b></i></li>
+          </ul>
+        </div>
+      </div>
+
+      <div id="access_department" class="col l4 s12">
+        <div class="card-box">
+          <ul class="card-list">
+            <li class="sub_header">
+              <h2>ACCESS DEPARTMENT</h2></li>
+            <li>A new UWA department, representing UWA students with lived experience with disability, mental health, and medical conditions. Offering peer support groups and advocacy events.</li>
+            <li class="blue"><i><b>EMAIL: <a href="mailto:access@guild.uwa.edu.au">access@guild.uwa.edu.au</a></b></i></li>
+            <li class="blue"><i><b>ADDRESS: Guild Student Centre, Third Floor, Guild Village</b></i></li>
+          </ul>
+        </div>
+      </div>
+
+      <div id="uwa_medical_center" class="col l4 s12">
+        <div class="card-box">
+          <ul class="card-list">
+            <li class="sub_header">
+              <h2>UWA MEDICAL CENTRE</h2></li>
+            <li>Can discuss management of mental health conditions, BULK BILLED for students with a Medicare card, International students billed directly to OSHC.</li>
+            <li class="blue"><i><b>PH: (+61) 8 6488 2118</b></i></li>
+            <li class="blue"><i><b>WEB: <a href="https://bit.ly/uwamedcentre" target="_blank">https://bit.ly/uwamedcentre</a></b></i></li>
+            <li class="blue"><i><b>ADDRESS: 2nd Floor, South Wing, Guild Village</b></i></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="row">
+      <div id="uwa_alcohol" class="col l4 s12">
+        <div class="card-box">
+          <ul class="card-list">
+            <li class="sub_header">
+              <h2>UWA ALCOHOL AND DRUG COUNSELLING SERVICES</h2></li>
+            <li>Often mental health and abuse of alcohol and other drugs can be linked, confidential, free appointments available about personal use or the use of others.</li>
+            <li class="blue"><i><b>PH: (+61) 8 6488 2118</b></i></li>
+            <li class="blue"><i><b>ADDRESS: 2nd Floor, South Wing, Guild Village</b></i></li>
+          </ul>
+        </div>
+      </div>
+
+      <div id="equity_and_diversity" class="col l4 s12">
+        <div class="card-box">
+          <ul class="card-list">
+            <li class="sub_header">
+              <h2>UWA EQUITY AND DIVERSITY</h2></li>
+            <li>Ensures UWA provides an equitable and inclusive environment for sta , students, and the broader community.</li>
+            <li class="blue"><i><b>WEB: <a href="https://bit.ly/uwaequity" target="_blank">https://bit.ly/uwaequity</a></b></i></li>
+            <li class="blue"><i><b>ADDRESS: 1st Floor, Ken and Julie Michael Building</b></i></li>
+          </ul>
+        </div>
+      </div>
+
+      <div id="campus_security" class="col l4 s12">
+        <div class="card-box">
+          <ul class="card-list">
+            <li class="sub_header">
+              <h2>UWA CAMPUS SECURITY</h2></li>
+            <li>For any danger to you or others, seek safety and call campus security.</li>
+            <li class="blue"><i><b>PH: (24hrs) 2222, from a landline on Crawley campus, otherwise (+61) 6488 2222, or 1800 655 222, free from public phones</b></i></li>
+            <li class="blue"><i><b>WEB: <a href="https://bit.ly/uwasecurity" target="_blank">https://bit.ly/uwasecurity</a></b></i></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <br>
+    <h1 class="lv2title"><b>LOW COST/PAID SERVICES</b></h1>
+
+    <div class="row">
+      <div id="counselling" class="col l4 s12">
+        <div class="card-box">
+          <ul class="card-list">
+            <li class="sub_header">
+              <h2>UWA COUNSELLING AND PSYCHOLOGICAL SERVICES</h2></li>
+            <li>UWA students, helping with personal mental health issues, as well as academic issues that play a part in mental health.</li>
+            <li class="blue"><i><b>PH: (+61) 6488 2423</b></i></li>
+            <li class="blue"><i><b>WEB: <a href="https://bit.ly/uwacaps" target="_blank">https://bit.ly/uwacaps</a></b></i></li>
+            <li class="blue"><i><b>ADDRESS: 1st Floor, Student Central</b></i></li>
+          </ul>
+        </div>
+      </div>
+
+      <div id="medical_health_nurse" class="col l4 s12">
+        <div class="card-box">
+          <ul class="card-list">
+            <li class="sub_header">
+              <h2>UWA MEDICAL CENTRE – MENTAL HEALTH NURSE</h2></li>
+            <li>Available upon referral by a GP at UWA medical centre.</li>
+            <li class="blue"><i><b>PH: (+61) 6488 2423</b></i></li>
+            <li class="blue"><i><b>WEB: <a href="https://bit.ly/uwamedcentre" target="_blank">https://bit.ly/uwamedcentre</a></b></i></li>
+            <li class="blue"><i><b>ADDRESS: 2nd Floor, South Wing, Guild Village</b></i></li>
+          </ul>
+        </div>
+      </div>
+
+      <div id="robin_winkler_centre" class="col l4 s12">
+        <div class="card-box">
+          <ul class="card-list">
+            <li class="sub_header">
+              <h2>ROBIN WINKLER CENTRE</h2></li>
+            <li>Low Cost Therapy on campus, No GP referral needed. Not Bulk Billed, first appointment $35, following $30. Neuropsychological Assessment $320, fees paid on the day.</li>
+            <li class="blue"><i><b>PH: (+61) 8 6488 2644</b></i></li>
+            <li class="blue"><i><b>WEB: <a href=" https://bit.ly/uwa.rwc" target="_blank"> https://bit.ly/uwa.rwc</a></b></i></li>
+            <li class="blue"><i><b>ADDRESS: 1st Floor, General Purpose Building 3</b></i></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <!-- On-Campus Ends -->
+  </div>
+
+
+  <!-- Off-campus Starts -->
+  <div id="off_campus">
+    <div class="center-align">
+      <header class="lv1title">OFF CAMPUS SERVICES</header>
+    </div>
+
+    <h1 class="lv2title"><b>DEPRESSION/ANXIETY</b></h1>
+    <h2 class="lv3title"><b>FREE/LOW COST SERVICES</b></h2>
+    <h2 class="lv4title">CURTIN UNIVERSITY ADULT PSYCHOLOGY CLINIC</h2>
+
+    <div class="row">
+      <div id="mood_management" class="col l6 s12">
+        <div class="card-box">
+          <ul class="card-list">
+            <li class="sub_header">
+              <h2>Mood Management Program</h2></li>
+            <li>An 8-week group program for the treatment of anxiety and depression in adults. The group is based on cognitive behaviour therapy (CBT) and includes such things as learning relaxation skills, how to challenge unhelpful thinking and other strategies.</li>
+            <li class="blue"><i><b>PH: 9266 1717</b></i></li>
+            <li class="blue"><i><b>WEB: <a href="https://healthsciences.curtin.edu.au/our-clinics/adult-psychology-clinic" target="_blank">https://healthsciences.curtin.edu.au/our-clinics/adult-psychology-clinic</a></b></i></li>
+            <li class="blue"><i><b>Email:<a href="mailto:curtinclinics404@curtin.edu.au">curtinclinics404@curtin.edu.au</a></b></i></li>
+          </ul>
+        </div>
+      </div>
+
+      <div id="OCD" class="col l6 s12">
+        <div class="card-box">
+          <ul class="card-list">
+            <li class="sub_header">
+              <h2>Obsessive-Compulsive Disorder (OCD) Treatment Program</h2></li>
+            <li>A specialist OCD treatment program o ering the latest evidence-based treatments for OCD to clients.<br />Standard consultations cost $45, Group programs cost $25 and Cognitive assessments cost $255.</li>
+            <li class="blue"><i><b>PH: 9266 1717</b></i></li>
+            <li class="blue"><i><b>WEB: <a href="https://healthsciences.curtin.edu.au/our-clinics/adult-psychology-clinic" target="_blank">https://healthsciences.curtin.edu.au/our-clinics/adult-psychology-clinic</a></b></i></li>
+            <li class="blue"><i><b>Email:<a href="mailto:curtinclinics404@curtin.edu.au">curtinclinics404@curtin.edu.au</a></b></i></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <!-- <div class="row">
+      <div id="mood_management" class="col l4 s12">
+        <div class="card-box">
+          <ul class="card-list">
+            <li class="sub_header">
+              <h2>CURTIN UNIVERSITY ADULT PSYCHOLOGY CLINIC</h2></li>
+            <li>Mood Management Program:<br />An 8-week group program for the treatment of anxiety and depression in adults. The group is based on cognitive behaviour therapy (CBT) and includes such things as learning relaxation skills, how to challenge unhelpful thinking and other strategies.<br />Obsessive-Compulsive Disorder (OCD) Treatment Program:<br />A specialist OCD treatment program o ering the latest evidence-based treatments for OCD to clients.<br />Standard consultations cost $45, Group programs cost $25 and Cognitive assessments cost $255.</li>
+            <li class="blue"><i><b>PH: 9266 1717</b></i></li>
+            <li class="blue"><i><b>WEB: <a href="https://healthsciences.curtin.edu.au/our-clinics/adult-psychology-clinic" target="_blank">https://healthsciences.curtin.edu.au/our-clinics/adult-psychology-clinic</a></b></i></li>
+            <li class="blue"><i><b>Email:<a href="mailto:curtinclinics404@curtin.edu.au">curtinclinics404@curtin.edu.au</a></b></i></li>
+          </ul>
+        </div>
+      </div>
+    </div> -->
+
+
+
+    <br />
+    <h2 class="lv4title">CENTRE FOR CLINICAL INTERVENTIONS &nbsp (ALL SERVICES ARE FREE)</h2>
+
+    <div class="row">
+      <div id="mood_course" class="col l4 s12">
+        <div class="card-box">
+          <ul class="card-list">
+            <li class="sub_header">
+              <h2>Mood Management Course</h2></li>
+            <li>A specifically designed course to provide e ective treatment for individuals currently su ering from anxiety and depression.</li>
+            <li class="blue"><i><b>PH: 9227 4399</b></i></li>
+            <li class="blue"><i><b>WEB: <a href="https://cci.health.wa.gov.au/treatment/workshop.cfm?Treatment_ID=55" target="_blank">https://cci.health.wa.gov.au/treatment/<br />workshop.cfm?Treatment_ID=55</a></b></i></li>
+            <li class="blue"><i><b>Email:<a href="mailto:info.cci@health.wa.gov.au">info.cci@health.wa.gov.au</a></b></i></li>
+          </ul>
+        </div>
+      </div>
+
+      <div id="specialist_group_program" class="col l4 s12">
+        <div class="card-box">
+          <ul class="card-list">
+            <li class="sub_header">
+              <h2>Specialist Group Program</h2></li>
+            <li>Cognitive behavioural group intervention for people with social phobia and social anxiety disorder.</li>
+            <li class="blue"><i><b>PH: 9227 4399</b></i></li>
+            <li class="blue"><i><b>WEB: <a href="https://cci.health.wa.gov.au/treatment/workshop.cfm?Treatment_ID=55" target="_blank">https://cci.health.wa.gov.au/treatment/<br />workshop.cfm?Treatment_ID=55</a></b></i></li>
+            <li class="blue"><i><b>Email:<a href="mailto:info.cci@health.wa.gov.au">info.cci@health.wa.gov.au</a></b></i></li>
+          </ul>
+        </div>
+      </div>
+
+      <div id="individual_therapy" class="col l4 s12">
+        <div class="card-box">
+          <ul class="card-list">
+            <li class="sub_header">
+              <h2>Individual Therapy</h2></li>
+            <li>Interventions for disorders including Major Depressive Disorder, Panic Disorder, Social Anxiety Disorder.</li>
+            <li class="blue"><i><b>PH: 9227 4399</b></i></li>
+            <li class="blue"><i><b>WEB: <a href="https://cci.health.wa.gov.au/treatment/workshop.cfm?Treatment_ID=55" target="_blank">https://cci.health.wa.gov.au/treatment/<br />workshop.cfm?Treatment_ID=55</a></b></i></li>
+            <li class="blue"><i><b>Email:<a href="mailto:info.cci@health.wa.gov.au">info.cci@health.wa.gov.au</a></b></i></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+
+    <br>
+    <h2 class="lv4title">BEYONDBLUE</h2>
+    <div class="row">
+      <div class="col l6 s12">
+        <div class="card-box">
+          <ul class="card-list">
+            <li class="sub_header">
+              <h2>BEYONDBLUE</h2></li>
+            <li>Promotes good mental health, tackles stigma and discrimination, and provides support and information on anxiety, depression and suicide to everyone in Australia.<br />Services include a(n):<br />24/7 call-line (with FREE Interpretation services)
+              1300 22 4636, online chat, 24-hour response cycle email and online forums.</li>
+            <li class="blue"><i><b>PH: 03 9810 6100</b></i></li>
+            <li class="blue"><i><b>WEB: <a href="https://beyondblue.org.au" target="_blank">https://beyondblue.org.au</a></b></i></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <br>
+    <h2 class="lv3title"><b>PRIVATE SERVICES</b></h2>
+    <h2 class="lv4title">PSYCHOLOGICAL HEALTH CARE</h2>
+
+    <div class="row">
+      <div class="col l6 s12">
+        <div class="card-box">
+          <ul class="card-list">
+            <li class="sub_header">
+              <h2>Panic Attack Counselling and Treatment</h2></li>
+            <li>Can help you to learn how to control panic attacks, so that they have less impact on your life. Treatments vary, according to the type of anxiety being experienced, and can go beyond the recovery of a current anxiety attack, to being able
+              to help prevent a recurrence.</li>
+            <li class="blue"><i><b>PH: 9275 9406 &nbsp &nbsp - Dianella head office<br>PH: 9448 5999 &nbsp &nbsp - Warwick office</b></i></li>
+            <li class="blue"><i><b>WEB: <a href="https://psychologicalhealthcare.com.au" target="_blank">https://psychologicalhealthcare.com.au</a></b></i></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="col l6 s12">
+        <div class="card-box">
+          <ul class="card-list">
+            <li class="sub_header">
+              <h2>Grief Counselling</h2></li>
+            <li>If you’re having trouble coping with the loss of a loved- one, grief counselling can help you to find ways to address and deal with the emotional pain, helping you to move forward with life in this new world without your loved-one in it.<br
+              />Fees partially reimbursed by private health insurance and Medicare (with a GP referral and mental health care plan)</li>
+            <li class="blue"><i><b>PH: 9275 9406 &nbsp &nbsp - Dianella head office<br>PH: 9448 5999 &nbsp &nbsp - Warwick office</b></i></li>
+            <li class="blue"><i><b>WEB: <a href="https://psychologicalhealthcare.com.au" target="_blank">https://psychologicalhealthcare.com.au</a></b></i></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+
+    <br><br>
+    <h1 class="lv2title"><b>TRAUMA/PTSD/ASSAULT</b></h1>
+    <h2 class="lv3title"><b>FREE/LOW COST SERVICES</b></h2>
+    <h2 class="lv4title">ANGELHANDS</h2>
+
+    <div class="row">
+      <div class="col l6 s12">
+        <div class="card-box">
+          <ul class="card-list">
+            <li class="sub_header">
+              <h2>Befriending (Trauma Recovery Angels) program</h2></li>
+            <li>Befriending is a supportive relationship offered to secondary victims of homicide and victims of serious personal violence (clients), to assist with the understanding and processing of trauma so as to promote their recovery.</li>
+            <li class="blue"><i><b>PH: 9272 2242</b></i></li>
+            <li class="blue"><i><b>WEB: <a href="https://angelhands.org.au/?v=fdd13832cd81" target="_blank">https://angelhands.org.au/?v=fdd13832cd81</a></b></i></li>
+            <li class="blue"><i><b>Email:<a href="mailto:admin@angelhands.org.au">admin@angelhands.org.au</a></b></i></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="col l6 s12">
+        <div class="card-box">
+          <ul class="card-list">
+            <li class="sub_header">
+              <h2>CREW (creative recovery emergence workshops)</h2></li>
+            <li>Learn skills, tools and strategies to identify and master the things you want to change about your responses to trauma and life.</li>
+            <li class="blue"><i><b>PH: 9272 2242</b></i></li>
+            <li class="blue"><i><b>WEB: <a href="https://angelhands.org.au/?v=fdd13832cd81" target="_blank">https://angelhands.org.au/?v=fdd13832cd81</a></b></i></li>
+            <li class="blue"><i><b>Email:<a href="mailto:admin@angelhands.org.au">admin@angelhands.org.au</a></b></i></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <br />
+    <h2 class="lv4title">SARC (SEXUAL ASSAULT RESOURCE CENTRE)</h2>
+    <div class="row">
+      <div class="col l6 s12">
+        <div class="card-box">
+          <ul class="card-list">
+            <li class="sub_header">
+              <h2>24-hour emergency sexual assault treatment (rape crisis)</h2></li>
+            <li>Includes medical care, a forensic examination and counselling support to people who have been sexually assaulted (or raped) within the previous 14 days.</li>
+            <li class="blue"><i><b>PH: 6458 1820</b></i></li>
+            <li class="blue"><i><b>WEB: <a href="https://kemh.health.wa.gov.au/services/sarc/index.htm" target="_blank">https://kemh.health.wa.gov.au/services/sarc/index.htm</a></b></i></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="col l6 s12">
+        <div class="card-box">
+          <ul class="card-list">
+            <li class="sub_header">
+              <h2>Counselling</h2></li>
+            <li>In centres across the Perth metropolitan area to people who have experienced sexual assault (rape) and sexual abuse in the past.<br />24 hour emergency line for recent sexual assault: 6458 1828/ 1800 199 888 (free land line call)<br />Emergency
+              telephone counselling (8.30am -11.00pm daily): 6458 1828<br />All services are free.</li>
+            <li class="blue"><i><b>PH: 6458 1820</b></i></li>
+            <li class="blue"><i><b>WEB: <a href="https://kemh.health.wa.gov.au/services/sarc/index.htm" target="_blank">https://kemh.health.wa.gov.au/services/sarc/index.htm</a></b></i></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <br>
+    <h2 class="lv4title">BLUE KNOT FOUNDATION</h2>
+    <div class="row">
+      <div class="col l6 s12">
+        <div class="card-box">
+          <ul class="card-list">
+            <li class="sub_header">
+              <h2>Blue Knot Helpline </h2></li>
+            <li>(9am-5pm Monday to Sunday, AEST): 1300 657 380<br />Professional short-term counselling support, information, referrals for ongoing support, support and guidance for engaging with the Royal Commission.</li>
+            <li class="blue"><i><b>PH: 02 8920 3611</b></i></li>
+            <li class="blue"><i><b>WEB: <a href="https://blueknot.org.au" target="_blank">https://blueknot.org.au</a></b></i></li>
+            <li class="blue"><i><b>Email:<a href="mailto:admin@blueknot.or.au">admin@blueknot.or.au</a></b></i></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <br><br>
+    <h1 class="lv2title"><b>EATING/WEIGHT-RELATED DISORDERS</b></h1>
+    <h2 class="lv3title"><b>FREE/LOW COST SERVICES</b></h2>
+    <h2 class="lv4title">CENTRE FOR CLINICAL INTERVENTIONS</h2>
+
+    <div class="row">
+      <div class="col l6 s12">
+        <div class="card-box">
+          <ul class="card-list">
+            <li class="sub_header">
+              <h2>Individual treatment</h2></li>
+            <li>A specialist community-based psychological service for individuals (aged 16 years and over) with an eating disorder – such as anorexia nervosa and bulimia nervosa.<br />All services are free.</li>
+            <li class="blue"><i><b>PH: 9227 4399</b></i></li>
+            <li class="blue"><i><b>WEB: <a href="https://cci.health.wa.gov.au/treatment/index.cfm#" target="_blank">https://cci.health.wa.gov.au/treatment/index.cfm#</a></b></i></li>
+            <li class="blue"><i><b>Email:<a href="mailto:info.cci@health.wa.gov.au">info.cci@health.wa.gov.au</a></b></i></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="col l6 s12">
+        <div class="card-box">
+          <ul class="card-list">
+            <li class="sub_header">
+              <h2>Eating disorders support + skill building group for family & friends</h2></li>
+            <li>Free two-part group for carers, family members, and/or friends of people with eating disorders.<br />All services are free.</li>
+            <li class="blue"><i><b>PH: 9227 4399</b></i></li>
+            <li class="blue"><i><b>WEB: <a href="https://cci.health.wa.gov.au/treatment/index.cfm#" target="_blank">https://cci.health.wa.gov.au/treatment/index.cfm#</a></b></i></li>
+            <li class="blue"><i><b>Email:<a href="mailto:info.cci@health.wa.gov.au">info.cci@health.wa.gov.au</a></b></i></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <br>
+    <h2 class="lv4title">BUTTERFLY FOUNDATION</h2>
+    <div class="row">
+      <div class="col l6 s12">
+        <div class="card-box">
+          <ul class="card-list">
+            <li class="sub_header">
+              <h2>Butterfly’s National Helpline ED HOPE </h2></li>
+            <li>(8am-12am AEST) 1800 334 673<br />Is Australia’s national eating disorders support service. The counsellors are experienced and professionally trained in supporting those a ected by an eating disorder. They are well equipped to provide information
+              and guidance on treatment options as well as referral pathways.</li>
+            <li class="blue"><i><b>PH: 02 8920 3611</b></i></li>
+            <li class="blue"><i><b>WEB: <a href="https://thebutterflyfoundation.org.au" target="_blank">https://thebutterflyfoundation.org.au</a></b></i></li>
+            <li class="blue"><i><b>Email:<a href="mailto:Info@thebutterflyfoundation.org.au">Info@thebutterflyfoundation.org.au</a></b></i></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <br />
+    <h2 class="lv3title"><b>PRIVATE SERVICES</b></h2>
+
+
+    <h2 class="lv4title">THE HOLLYWOOD CLINIC</h2>
+    <div class="row">
+      <div class="col l6 s12">
+        <div class="card-box">
+          <ul class="card-list">
+            <li class="sub_header">
+              <h2>Day Patient Program</h2></li>
+            <li>This program is suitable for patients 16+ with less severe eating disorders, or to reinforce gains made in a recent inpatient stay for an eating disorder.</li>
+            <li class="blue"><i><b>PH: 9346 6801</b></i></li>
+            <li class="blue"><i><b>WEB: <a href="https://hollywoodclinic.com.au/Our-Programs/Eating-Disorder-Programs" target="_blank">https://hollywoodclinic.com.au/Our-Programs/Eating-Disorder-Programs</a></b></i></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="col l6 s12">
+        <div class="card-box">
+          <ul class="card-list">
+            <li class="sub_header">
+              <h2>Inpatient Program</h2></li>
+            <li>This inpatient service is suitable for patients 16+ who may not have responded well to outpatient therapy and require more intensive therapy.<br />Please consult private health insurance whether services are covered.</li>
+            <li class="blue"><i><b>PH: 9346 6801</b></i></li>
+            <li class="blue"><i><b>WEB: <a href="https://hollywoodclinic.com.au/Our-Programs/Eating-Disorder-Programs" target="_blank">https://hollywoodclinic.com.au/Our-Programs/Eating-Disorder-Programs</a></b></i></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <br>
+    <h2 class="lv4title">THE SWAN CENTRE</h2>
+    <div class="row">
+      <div class="col l6 s12">
+        <div class="card-box">
+          <ul class="card-list">
+            <li class="sub_header">
+              <h2>THE SWAN CENTRE</h2></li>
+            <li>Offers a range of therapies tailored towards supporting those with eating disorders such as bulimia nervosa and anorexia and nervosa.<br />Partially reimbursed by private health insurance and Medicare (with a GP referral- mental health care
+              plan).<br />(Medicare rebates are paid for the cost of ten appointments in a calendar year, with the rebate currently set at $84.50 – $124.50 per individual appointment).</li>
+            <li class="blue"><i><b>PH: 9382 8775</b></i></li>
+            <li class="blue"><i><b>WEB: <a href="https://swancentre.com.au" target="_blank">https://swancentre.com.au</a></b></i></li>
+            <li class="blue"><i><b>Email:<a href="mailto:Reception@swancentre.com.au">Reception@swancentre.com.au</a></b></i></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <br>
+    <h2 class="lv4title">VIVID PSYCHOLOGY</h2>
+    <div class="row">
+      <div class="col l6 s12">
+        <div class="card-box">
+          <ul class="card-list">
+            <li class="sub_header">
+              <h2>Eating Disorder Help & Counselling</h2></li>
+            <li>Provides specialised treatment for individuals who are experiencing symptoms of Eating/weight-related disorders.<br />Treatment partially reimbursed by private health insurance and Medicare (with a GP referral- mental health care plan).</li>
+            <li class="blue"><i><b>PH: 9226 3401</b></i></li>
+            <li class="blue"><i><b>WEB: <a href="https://vividpsychology.com.au" target="_blank">https://vividpsychology.com.au</a></b></i></li>
+            <li class="blue"><i><b>Email:<a href="mailto:admin@vividpsychology.com.au">admin@vividpsychology.com.au</a></b></i></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+
+    <br><br>
+    <h1 class="lv2title"><b>ALCOHOL AND OTHER DRUGS</b></h1>
+    <h2 class="lv3title"><b>FREE/LOW COST SERVICES</b></h2>
+
+    <h2 class="lv4title">MISSION AUSTRALIA</h2>
+    <div class="row">
+      <div class="col l6 s12">
+        <div class="card-box">
+          <ul class="card-list">
+            <li class="sub_header">
+              <h2>Drug And Alcohol Youth Service (DAYS)</h2></li>
+            <li>Provides young people and their families’ access to a comprehensive range of free and confidential alcohol and other drug services.</li>
+            <li class="blue"><i><b>PH: 9225 0400 &nbsp -State office<br />PH: 9222 6300 &nbsp -General enquiries</b></i></li>
+            <li class="blue"><i><b>WEB: <a href="http://sd.missionaustralia.com.au/386-drug-and-alcohol-youth-service" target="_blank">http://sd.missionaustralia.com.au/386-drug-and-alcohol-youth-service</a></b></i></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <br>
+    <h2 class="lv4title">HOLYOAKE</h2>
+    <div class="row">
+      <div class="col l6 s12">
+        <div class="card-box">
+          <ul class="card-list">
+            <li class="sub_header">
+              <h2>Counselling and support</h2></li>
+            <li>Free counselling and support for those a ected by the misuse of alcohol or other drugs.</li>
+            <li class="blue"><i><b>PH: 9416 4444 &nbsp -Victoria park counselling and support<br />PH: 9274 7055 &nbsp -Midland counselling and support</b></i></li>
+            <li class="blue"><i><b>WEB: <a href="http://holyoake.org.au" target="_blank">http://holyoake.org.au</a></b></i></li>
+            <li class="blue"><i><b>Email:<a href="mailto:midland_reception@holyoake.org.au">midland_reception@holyoake.org.au</a></b></i></li>
+
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <br>
+    <h2 class="lv4title">PALMERSTON</h2>
+    <div class="row">
+      <div class="col l6 s12">
+        <div class="card-box">
+          <ul class="card-list">
+            <li class="sub_header">
+              <h2>PALMERSTON</h2></li>
+            <li>Offers a range of out-care services including counselling, interpreter services and support groups as well as residential services.<br />Counselling incurs a small fee.<br />Residential services cost approximately $175 per week, paid two weeks
+              in advance. There is a refundable $50 room bond payable on entry, and $27 on entry, for ambulance cover.</li>
+            <li class="blue"><i><b>PH: 9328 7355 &nbsp -Palmerston Perth</b></i></li>
+            <li class="blue"><i><b>WEB: <a href="http://palmerston.org.au" target="_blank">http://palmerston.org.au</a></b></i></li>
+            <li class="blue"><i><b>Email:<a href="mailto:perth@palmerston.org.au">perth@palmerston.org.au</a></b></i></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <br>
+    <h2 class="lv4title">CYRENIAN HOUSE</h2>
+    <div class="row">
+      <div class="col l6 s12">
+        <div class="card-box">
+          <ul class="card-list">
+            <li class="sub_header">
+              <h2>North Metro Community Alcohol and Drug Service (NMCADS)</h2></li>
+            <li>FREE and confidential service which provides individuals and their families with improved access to a comprehensive range of alcohol and other drug services.<br />All services are free.</li>
+            <li class="blue"><i><b>PH: 9328 9200 &nbsp -General Enquiries</b></i></li>
+            <li class="blue"><i><b>WEB: <a href="http://cyrenianhouse.com" target="_blank">http://cyrenianhouse.com</a></b></i></li>
+            <li class="blue"><i><b>Email:<a href="mailto:enquiry@cyrenianhouse.com">enquiry@cyrenianhouse.com</a></b></i></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <br>
+    <h2 class="lv4title">NEXT STEP DRUG AND ALCOHOL SERVICES (NEXT STEP)</h2>
+    <div class="row">
+      <div class="col l6 s12">
+        <div class="card-box">
+          <ul class="card-list">
+            <li class="sub_header">
+              <h2>NEXT STEP DRUG AND ALCOHOL SERVICES (NEXT STEP)</h2></li>
+            <li>Provides a range of treatment services for people experiencing problems associated with their alcohol and other drug use, as well as support for families including Outpatient Services, Inpatient Withdrawal Units and a Community Pharmacotherapy
+              Program (CPP).<br />All services are free.</li>
+            <li class="blue"><i><b>Phone: 9219 1919  &nbsp -Outpatient services (East Perth)<br />Phone: 9219 1919 &nbsp -Inpatient withdrawal unit<br />Phone: 9219 1907 &nbsp -CPP</b></i></li>
+            <li class="blue"><i><b>WEB: <a href="http://mhc.wa.gov.au/about-us/our-services/next-step-drug-and-alcohol-services" target="_blank">http://mhc.wa.gov.au/about-us/our-services/next-step-drug-and-alcohol-services</a></b></i></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <br><br>
+    <h1 class="lv2title"><b>SERVICES SPECIFICALLY FOR LGBTIQA+ STUDENTS</b></h1>
+    <h2 class="lv3title"><b>FREE/LOW COST SERVICES</b></h2>
+    <h2 class="lv4title">QLIFE</h2>
+
+    <div class="row">
+      <div class="col l6 s12">
+        <div class="card-box">
+          <ul class="card-list">
+            <li class="sub_header">
+              <h2>QLIFE</h2></li>
+            <li>Australia’s first nationally-oriented counselling and referral service for people who are lesbian, gay, bisexual, trans, and/or intersex (LGBTI).<br />Services include a(n):<br />Call-line 1800 184 527, online chat (3pm-12am everyday), counselling
+              and referral services.</li>
+            <li class="blue"><i><b>WEB: <a href="http://qlife.org.au" target="_blank">http://qlife.org.au</a></b></i></li>
+            <li class="blue"><i><b>Email:<a href="mailto:ask@qlife.org.au">ask@qlife.org.au</a></b></i></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <br>
+    <h2 class="lv4title">FREEDOM CENTRE</h2>
+
+    <div class="row">
+      <div class="col l6 s12">
+        <div class="card-box">
+          <ul class="card-list">
+            <li class="sub_header">
+              <h2>Freedom Centre</h2></li>
+            <li>Is a safe place to meet other young people (under 26) who are LGBTIQA.</li>
+            <li class="blue"><i><b>PH: 9482 0000 / 9228 0354</b></i></li>
+            <li class="blue"><i><b>WEB: <a href="http://freedom.org.au" target="_blank">http://freedom.org.au</a></b></i></li>
+            <li class="blue"><i><b>Email:<a href="mailto:info@freedom.org.au">info@freedom.org.au &nbsp - FC Coordinator, Bryan</a></b></i></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="col l6 s12">
+        <div class="card-box">
+          <ul class="card-list">
+            <li class="sub_header">
+              <h2>Isabelle Lake Memorial Fund</h2></li>
+            <li>Provides the opportunity for trans young people (under 30) in Western Australia to apply for funds to cover some costs of activities, services or goods that advance the health, education, and/or alleviate poverty for young people who are trans.</li>
+            <li class="blue"><i><b>PH: 9482 0000 / 9228 0354</b></i></li>
+            <li class="blue"><i><b>WEB: <a href="http://freedom.org.au" target="_blank">http://freedom.org.au</a></b></i></li>
+            <li class="blue"><i><b>Email:<a href="mailto:info@freedom.org.au">info@freedom.org.au &nbsp - FC Coordinator, Bryan</a></b></i></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <br>
+    <h2 class="lv4title">LIVING PROUD</h2>
+
+    <div class="row">
+      <div class="col l6 s12">
+        <div class="card-box">
+          <ul class="card-list">
+            <li class="sub_header">
+              <h2>LIVING PROUD</h2></li>
+            <li>Aims to promote the wellbeing of lesbian, gay, sex, queer, and other sexuality, sex, and gender diverse people in WA.</li>
+            <li class="blue"><i><b>PH: 9486 9855</b></i></li>
+            <li class="blue"><i><b>WEB: <a href="http://livingproud.org.au" target="_blank">http://livingproud.org.au</a></b></i></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <br><br>
+    <h1 class="lv2title"><b>relationships</b></h1>
+    <h2 class="lv3title"><b>FREE/LOW COST SERVICES</b></h2>
+    <h2 class="lv4title">RELATIONSHIPS AUSTRALIA</h2>
+
+    <div class="row">
+      <div class="col l6 s12">
+        <div class="card-box">
+          <ul class="card-list">
+            <li class="sub_header">
+              <h2>RELATIONSHIPS AUSTRALIA</h2></li>
+            <li>Offers a range of services for men, women, young people and children who have perpetrated, experienced or seen abuse in their families or in their relationships.</li>
+            <li class="blue"><i><b>PH: 1300 364 277 &nbsp -Appointments<br />PH: 6164 0190 &nbsp -Counselling</b></i></li>
+            <li class="blue"><i><b>WEB: <a href="http://relationshipswa.org.au" target="_blank">http://relationshipswa.org.au</a></b></i></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <br>
+    <h2 class="lv4title">ANGLICARE</h2>
+    <div class="row">
+      <div class="col l6 s12">
+        <div class="card-box">
+          <ul class="card-list">
+            <li class="sub_header">
+              <h2>ANGLICARE</h2></li>
+            <li>Offers relationship counselling and Domestic Violence Advocacy Support Services as well as programs specifically for men to assist, empower and educate men on a variety of issues</li>
+            <li class="blue"><i><b>PH: 1800 812 511 &nbsp -Appointments<br />PH: 9263 2050 or 1300 11 44 46 &nbsp -Relationship counselling (East Perth)<br />PH: 9821 9663 or 1800 818 593 &nbsp -Domestic Violence Advocacy Support Service</b></i></li>
+            <li class="blue"><i><b>WEB: <a href="http://anglicarewa.org.au" target="_blank">http://anglicarewa.org.au</a></b></i></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <br><br>
+    <h1 class="lv2title"><b>general wellbeing/health</b></h1>
+    <h2 class="lv4title">HEADSPACE</h2>
+
+    <div class="row">
+      <div class="col l6 s12">
+        <div class="card-box">
+          <ul class="card-list">
+            <li class="sub_header">
+              <h2>HEADSPACE</h2></li>
+            <li>Services include a(n):<br />Call-line 1800 650 890, email, online chat<br />Headspace centres: headspace has centres located throughout Australia sta ed with people who are trained and ready to help.</li>
+            <li class="blue"><i><b>WEB: <a href="http://headspace.org.au" target="_blank">http://headspace.org.au</a></b></i></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <br />
+    <h2 class="lv4title">HELPING MINDS</h2>
+    <div class="row">
+      <div class="col l6 s12">
+        <div class="card-box">
+          <ul class="card-list">
+            <li class="sub_header">
+              <h2>HELPING MINDS</h2></li>
+            <li>Services include: free counselling, support groups, advocacy, and help with navigating mental health system.</li>
+            <li class="blue"><i><b>PH: +61 (8) 9427 7100 or 1800 811 747 (free line)</b></i></li>
+            <li class="blue"><i><b>WEB: <a href="http://youthlink.perthwa.net" target="_blank">http://youthlink.perthwa.net</a></b></i></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <br />
+    <h2 class="lv4title">YOUTHLINK</h2>
+    <div class="row">
+      <div class="col l6 s12">
+        <div class="card-box">
+          <ul class="card-list">
+            <li class="sub_header">
+              <h2>YOUTHLINK</h2></li>
+            <li>YouthLink provides specialist mental health counselling, consultation, training and community development.</li>
+            <li class="blue"><i><b>PH: 1300 362 569</b></i></li>
+            <li class="blue"><i><b>WEB: <a href="http://youthlink.perthwa.net" target="_blank">http://youthlink.perthwa.net</a></b></i></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <br />
+    <h2 class="lv4title">YOUTH FOCUS (General Counselling)</h2>
+    <div class="row">
+      <div class="col l6 s12">
+        <div class="card-box">
+          <ul class="card-list">
+            <li class="sub_header">
+              <h2>Peer Support Program</h2></li>
+            <li>Provides opportunities for young people to engage in therapeutic recreational or leisure based activates with other young people who have shared lived experiences.</li>
+            <li class="blue"><i><b>PH: 6266 4333</b></i></li>
+            <li class="blue"><i><b>WEB: <a href="http://youthfocus.com.au" target="_blank">http://youthfocus.com.au</a></b></i></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="col l6 s12">
+        <div class="card-box">
+          <ul class="card-list">
+            <li class="sub_header">
+              <h2>Youth Focus Mentoring Program</h2></li>
+            <li>Supports young people aged 12 to 25 who may be experiencing early signs associated with suicide, depression, anxiety and self-harm.</li>
+            <li class="blue"><i><b>PH: 6266 4333</b></i></li>
+            <li class="blue"><i><b>WEB: <a href="http://youthfocus.com.au" target="_blank">http://youthfocus.com.au</a></b></i></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <br />
+    <h2 class="lv4title">SANE</h2>
+    <div class="row">
+      <div class="col l6 s12">
+        <div class="card-box">
+          <ul class="card-list">
+            <li class="sub_header">
+              <h2>SANE</h2></li>
+            <li>Helpline 1800 18 7263:<br />Talk to a mental health professional over the phone.<br />Helpline chat:<br />Talk online to a mental health professional<br />Online factsheets:<br />About different mental disorders and general wellbeing</li>
+            <li class="blue"><i><b>PH: 03 9682 5933</b></i></li>
+            <li class="blue"><i><b>WEB: <a href="http://sane.org" target="_blank">http://sane.org</a></b></i></li>
+            <li class="blue"><i><b>Email:<a href="mailto:info@sane.org">info@sane.org</a></b></i></li>
+
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <br><br>
+    <h1 class="lv2title"><b>schizophrenia</b></h1>
+    <h2 class="lv3title"><b>FREE/LOW COST SERVICES</b></h2>
+    <h2 class="lv4title">DEPARTMENT OF HEALTH, GOVERNMENT OF WESTERN AUSTRALIA- YOUTH AXIS</h2>
+    <div class="row">
+      <div class="col l6 s12">
+        <div class="card-box">
+          <ul class="card-list">
+            <li class="sub_header">
+              <h2>Youth Axis</h2></li>
+            <li>Provides assessment and interventions for young people who have significant symptoms of a disorder but do not currently meet diagnostic criteria for Personality Disorders and/or psychotic disorders.</li>
+            <li class="blue"><i><b>PH: 9287 5700</b></i></li>
+            <li class="blue"><i><b>WEB: <a href="http://nmahsmh.health.wa.gov.au/services/youth.cfm" target="_blank">http://nmahsmh.health.wa.gov.au/services/youth.cfm</a></b></i></li>
+            <li class="blue"><i><b>Email:<a href="mailto:youthaxis@health.wa.gov.au">youthaxis@health.wa.gov.au</a></b></i></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <br>
+    <h2 class="lv4title">GOVERNMENT OF WESTERN AUSTRALIA, EAST METROPOLITAN HEALTH SERVICE- CHILD AND ADOLESCENT MENTAL HEALTH SERVICES</h2>
+    <div class="row">
+      <div class="col l6 s12">
+        <div class="card-box">
+          <ul class="card-list">
+            <li class="sub_header">
+              <h2>Early Intervention In Psychosis Service (EIPS)</h2></li>
+            <li>Is a community-based intensive case management service focusing on providing individualised, comprehensive care for young people with psychosis and their families.</li>
+            <li class="blue"><i><b>PH: 9334 3863</b></i></li>
+            <li class="blue"><i><b>WEB: <a href="http://bhs.health.wa.gov.au/Our-services/Service-Directory/Early-Intervention-in-Psychosis" target="_blank">http://bhs.health.wa.gov.au/Our-services/Service-Directory/Early-Intervention-in-Psychosis</a></b></i></li>
+            <li class="blue"><i><b>Email:<a href="mailto:louise.splatt@health.wa.gov.au">louise.splatt@health.wa.gov.au</a></b></i></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <br>
+    <h2 class="lv3title"><b>PRIVATE SERVICES</b></h2>
+    <h2 class="lv4title">HEADSPACE</h2>
+    <div class="row">
+      <div class="col l6 s12">
+        <div class="card-box">
+          <ul class="card-list">
+            <li class="sub_header">
+              <h2>HYEP - Headspace Youth Early Psychosis Program</h2></li>
+            <li>Offers early intervention and specialist support services to young people experiencing or at risk of psychosis.</li>
+            <li class="blue"><i><b>PH: 9301 8999</b></i></li>
+            <li class="blue"><i><b>WEB: <a href="http://blackswanhealth.com.au/services/mental-health-services/hyepp" target="_blank">http://blackswanhealth.com.au/services/mental-healt-services/hyepp</a></b></i></li>
+            <li class="blue"><i><b>Email:<a href="mailto:hYEPPReferral@headsapcejoondalup.com.au">hYEPPReferral@headsapcejoondalup.com.au</a></b></i></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <br>
+
+
+
+
+
+  <!-- Off-campus Ends -->
+  </div>
+
+
+
+  <script src="./js/zenscroll-min.js"></script>
+  <script>
+    function smoothScroll(parent) {
+      var id = document.getElementById(parent);
+      zenscroll.to(id);
+    }
+  </script>
+</body>
+
+</html>

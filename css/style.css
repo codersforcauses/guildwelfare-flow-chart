@@ -1,0 +1,226 @@
+/* ----- Font Import ----- */
+@font-face {
+  font-family: BebasNeue;
+  src: url('../fonts/BebasNeueBold.ttf') format('TrueType');
+}
+
+@font-face {
+  font-family: GothamLight;
+  src: url('../fonts/GothamLight.otf') format('OpenType');
+}
+
+@font-face {
+  font-family: GothamMedium;
+  src: url('../fonts/GothamMedium.otf') format('OpenType');
+}
+
+
+/* General Part */
+html, body {
+  margin:0;
+  font-size: 14px;
+  font-family: 'GothamLight', sans-serif;
+  line-height: 1.5;
+}
+
+*{
+  -webkit-box-sizing:border-box;
+          box-sizing:border-box;
+}
+
+.center-align{
+  text-align:center;
+}
+
+/* Header Part */
+
+.web_header{
+  padding: 0;
+  margin: 0;
+  width: 100%;
+  height:60px;
+  background-color: #fff;
+  overflow: hidden;
+  position: fixed;
+  top: 0;
+  z-index: 1;
+  float:left;
+  line-height: 1;
+  -webkit-box-shadow: 0 4px 10px 0 rgba(0,0,0,0.2);
+          box-shadow: 0 4px 10px 0 rgba(0,0,0,0.2);
+}
+
+.header_icon{
+  margin-left:10%;
+  float:left;
+  display:inline-block;
+}
+
+.header_word{
+  margin:3px 30px;
+  padding: 0px 30px;
+  margin-left: 15%;
+  top:0;
+  color:rgb(0,156,222);
+}
+
+#header_part1{
+  margin-top: 3px;
+  margin-bottom: 2px;
+  font-size:32px;
+  font-family: 'BebasNeue';
+  letter-spacing: 3px;
+}
+
+#header_part2{
+  margin-top:2px;
+  margin-bottom:2px;
+  font-size: 20px;
+  font-family:'GothamMedium';
+  letter-spacing:1px;
+}
+
+
+/* Question Box Part */
+.question-box{
+  padding:4px;
+  margin-top:70px;
+}
+
+.button{
+  display:inline-block;
+  width: 150px;
+  height: 30px;
+  padding:4px 8px;
+  background-color: rgb(0, 24, 113);
+  color:#fff;
+  text-align: center;
+  border-radius: 50%;
+  cursor:pointer;
+}
+
+/* Crisis Supports */
+#crisis_supports ul{
+  list-style-type: none;
+}
+
+
+/* On Campus Part */
+.lv1title{
+  padding: 8px 0;
+  border-bottom: 8px solid rgb(0, 24, 113);
+  display: inline-block;
+  margin-top:60px;
+  margin-bottom:30px;
+  font-family:'BebasNeue';
+  font-size: 40px;
+}
+
+.lv2title{
+  padding:8px;
+  margin-left: 16px;
+  color: rgb(0, 24, 113);
+  font-family:'BebasNeue';
+}
+
+.card-box{
+  padding: 0 8px;
+  margin-bottom: 16px;
+}
+
+.card-list{
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  text-align: center;
+  border: 1px solid #ddd;
+  height:400px;
+}
+
+.card-list li{
+  padding: 16px 4px;
+  border-bottom: 1px solid #eee;
+}
+
+.card-list li:last-child{
+  border-bottom:none;
+}
+
+.card-list li.sub_header{
+  background-color: rgb(0, 24, 113);
+  color:#fff;
+  font-family: 'BebasNeue';
+  padding: 4px 0;
+}
+
+.card-list li.blue{
+  color:rgb(0, 24, 113);
+}
+
+.card-list li a{
+  color:rgb(0, 24, 113);
+  /* text-decoration: none; */
+}
+
+.card-list:hover{
+  -webkit-box-shadow:0 4px 16px 0 rgba(0,0,0,0.3), 0 4px 20px 0 rgba(0,0,0,0.19);
+  box-shadow: 0 4px 16px 0 rgba(0,0,0,0.3), 0 4px 20px 0 rgba(0,0,0,0.19);
+}
+
+/* Off Campus Services */
+#off_campus .lv1title{
+  border-bottom: 8px solid rgb(230, 116, 96);
+}
+
+#off_campus .lv2title{
+  color:rgb(230, 116, 96);
+}
+
+#off_campus .card-list li.sub_header{
+  background-color: rgb(230, 116, 96);
+}
+
+.lv3title{
+  padding:8px;
+  margin-left: 16px;
+  color: rgb(0, 24, 113);
+  font-family:'BebasNeue';
+  font-style: italic;
+}
+
+.lv4title{
+  font-family:'BebasNeue';
+  font-style: bold;
+  padding:8px;
+  margin-left: 16px;
+}
+
+
+
+
+
+/* Tool Style */
+.row::before,.row::after{
+  clear:both;
+  content:"";
+  display:table;
+}
+
+.col{
+  float:left;
+}
+
+.l4{
+  width:33.33%;
+}
+
+.l6{
+  width:50%;
+}
+
+.l12{
+  width:100%;
+}
+@media only screen and (max-width:600px){
+  .s12{width:100%}
+}
