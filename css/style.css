@@ -14,6 +14,11 @@
   src: url('../fonts/GothamMedium.otf') format('OpenType');
 }
 
+:root {
+  --lightBlue: rgb(0,156,222);
+  --darkBlue: rgb(0,24,113);
+
+}
 
 /* General Part */
 html, body {
@@ -52,22 +57,23 @@ html, body {
 
 .header_icon{
   margin-left:10%;
+  margin-top:5px;
   float:left;
   display:inline-block;
 }
 
 .header_word{
-  margin:3px 30px;
-  padding: 0px 30px;
+  margin:3px 20px;
+  padding: 0px 20px;
   margin-left: 15%;
   top:0;
-  color:rgb(0,156,222);
+  color:var(--lightBlue);
 }
 
 #header_part1{
-  margin-top: 3px;
+  margin-top: 15px;
   margin-bottom: 2px;
-  font-size:32px;
+  font-size:20px;
   font-family: 'BebasNeue';
   letter-spacing: 3px;
 }
@@ -75,7 +81,7 @@ html, body {
 #header_part2{
   margin-top:2px;
   margin-bottom:2px;
-  font-size: 20px;
+  font-size: 10px;
   font-family:'GothamMedium';
   letter-spacing:1px;
 }
@@ -92,7 +98,7 @@ html, body {
   width: 150px;
   height: 30px;
   padding:4px 8px;
-  background-color: rgb(0, 24, 113);
+  background-color: var(--darkBlue);
   color:#fff;
   text-align: center;
   border-radius: 50%;
@@ -108,7 +114,7 @@ html, body {
 /* On Campus Part */
 .lv1title{
   padding: 8px 0;
-  border-bottom: 8px solid rgb(0, 24, 113);
+  border-bottom: 8px solid var(--darkBlue);
   display: inline-block;
   margin-top:60px;
   margin-bottom:30px;
@@ -119,12 +125,13 @@ html, body {
 .lv2title{
   padding:8px;
   margin-left: 16px;
-  color: rgb(0, 24, 113);
+  color: var(--darkBlue);
   font-family:'BebasNeue';
+  font-size:30px;
 }
 
 .card-box{
-  padding: 0 8px;
+  padding: 0 20px;
   margin-bottom: 16px;
 }
 
@@ -134,12 +141,13 @@ html, body {
   margin: 0;
   text-align: center;
   border: 1px solid #ddd;
-  height:400px;
+  height:450px;
 }
 
 .card-list li{
-  padding: 16px 4px;
+  padding: 16px 16px;
   border-bottom: 1px solid #eee;
+  text-align: left;
 }
 
 .card-list li:last-child{
@@ -147,18 +155,20 @@ html, body {
 }
 
 .card-list li.sub_header{
-  background-color: rgb(0, 24, 113);
+  background-color: var(--darkBlue);
   color:#fff;
   font-family: 'BebasNeue';
-  padding: 4px 0;
+  padding: 4px 8px;
+  text-align: center;
 }
 
 .card-list li.blue{
-  color:rgb(0, 24, 113);
+  color:var(--darkBlue);
+  text-align:center;
 }
 
 .card-list li a{
-  color:rgb(0, 24, 113);
+  color:var(--darkBlue);
   /* text-decoration: none; */
 }
 
@@ -183,9 +193,10 @@ html, body {
 .lv3title{
   padding:8px;
   margin-left: 16px;
-  color: rgb(0, 24, 113);
+  color: var(--darkBlue);
   font-family:'BebasNeue';
   font-style: italic;
+  font-size:25px;
 }
 
 .lv4title{
@@ -193,6 +204,24 @@ html, body {
   font-style: bold;
   padding:8px;
   margin-left: 16px;
+  font-size:25px;
+}
+
+/* Online Services */
+#online .lv1title{
+  border-bottom: 8px solid var(--lightBlue);
+}
+
+#online .lv2title{
+  color:var(--lightBlue);
+}
+
+#online .card-list li.sub_header{
+  background-color: var(--lightBlue);
+}
+
+#online .card-list{
+  height:380px;
 }
 
 
@@ -221,6 +250,12 @@ html, body {
 .l12{
   width:100%;
 }
-@media only screen and (max-width:600px){
+@media only screen and (max-width:1000px){
   .s12{width:100%}
+  .card-list{height:auto}
+  #online .cardlist{height:auto}
 }
+
+/* @media only screen and (max-width:500px){
+  .card-list{height:auto}
+} */
