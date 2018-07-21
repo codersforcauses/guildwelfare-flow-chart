@@ -17,6 +17,7 @@
 :root {
   --lightBlue: rgb(0,156,222);
   --darkBlue: rgb(0,24,113);
+  --Yellow:#FFC72C;
 
 }
 
@@ -26,6 +27,7 @@ html, body {
   font-size: 14px;
   font-family: 'GothamLight', sans-serif;
   line-height: 1.5;
+  overflow-x: hidden;
 }
 
 *{
@@ -36,6 +38,13 @@ html, body {
 .center-align{
   text-align:center;
 }
+
+a {
+  /* margin-bottom:100px; */
+  padding:80px;
+}
+
+
 
 /* Header Part */
 
@@ -86,28 +95,114 @@ html, body {
   letter-spacing:1px;
 }
 
+/* Scroll To Top Button */
+#myBtn {
+    display: none; /* Hidden by default */
+    position: fixed; /* Fixed/sticky position */
+    bottom: 20px; /* Place the button at the bottom of the page */
+    right: 30px; /* Place the button 30px from the right */
+    z-index: 99; /* Make sure it does not overlap */
+    border: none; /* Remove borders */
+    outline: none; /* Remove outline */
+    background-color: var(--lightBlue); /* Set a background color */
+    color: white; /* Text color */
+    cursor: pointer; /* Add a mouse pointer on hover */
+    padding: 15px; /* Some padding */
+    border-radius: 10px; /* Rounded corners */
+    font-size: 24px; /* Increase font size */
+    opacity:0.4;
+}
+
+#myBtn:hover {
+    background-color: #555; /* Add a dark-grey background on hover */
+}
+
 
 /* Question Box Part */
 .question-box{
-  padding:4px;
-  margin-top:70px;
+  padding:32px;
+  /* margin-top:70px; */
+}
+
+.question p{
+  font-size: 30px;
+  font-family:"GothamMedium";
+  padding:16px;
+  color:#fff;
+  background-color: rgba(0,156,222,0.7);
+  border-radius: 5px;
+  margin-bottom:16px;
 }
 
 .button{
-  display:inline-block;
-  width: 150px;
-  height: 30px;
-  padding:4px 8px;
-  background-color: var(--darkBlue);
+  margin-top:0;
+  display:inline;
+  height:50px;
+  padding:0 8px;
+  background-color:rgba(0,24,113,0.7);
+  font-size: 26px;
   color:#fff;
   text-align: center;
-  border-radius: 50%;
+  border-radius: 3px;
   cursor:pointer;
+  border: 3px solid #999;
 }
 
+.button:visited,.button:hover{
+  background-color:var(--Yellow);
+}
+
+.button-box{
+  padding:0;
+  text-align:center;
+  position:relative;
+  height:150px;
+}
+
+#q2_div{
+  display:none;
+}
+
+#q3_div{
+  display:none;
+}
+
+#q4_div{
+  display:none;
+}
+
+#q5_div{
+  display:none;
+}
+
+#q6_div{
+  display:none;
+}
+
+#q5_div .button-box{
+  height:500px;
+}
+
+#q5_div .button{
+  display:block;
+  margin-bottom:8px;
+}
 /* Crisis Supports */
-#crisis_supports ul{
+.content ul{
   list-style-type: none;
+}
+
+#crisis_supports_div{
+  background-color:rgba(0,156,222,0.5);
+  color:#fff;
+  padding:16px;
+  font-size: 20px;
+  width:80%;
+  margin-left: 10%;
+}
+
+#crisis_title{
+  border-bottom: 8px solid var(--lightBlue);
 }
 
 
@@ -169,6 +264,7 @@ html, body {
 
 .card-list li a{
   color:var(--darkBlue);
+  padding:0;
   /* text-decoration: none; */
 }
 
@@ -253,9 +349,19 @@ html, body {
 @media only screen and (max-width:1000px){
   .s12{width:100%}
   .card-list{height:auto}
-  #online .cardlist{height:auto}
+  #online .card-list{height:auto}
 }
 
-/* @media only screen and (max-width:500px){
-  .card-list{height:auto}
-} */
+.animate-bottom {
+  position: relative;
+  -webkit-animation: animationbottom 0.6s;
+  animation: animationbottom 0.6s;
+}
+@-webkit-keyframes animationbottom {
+  from {bottom: -300px;opacity: 0;}
+  to {bottom: 0;opacity: 1}
+}
+@keyframes animationbottom {
+  from {bottom: -300px;opacity: 0;}
+  to {bottom: 0;opacity: 1}
+}

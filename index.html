@@ -4,12 +4,14 @@
 <head>
   <meta charset="utf-8">
   <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+  <link href="https://cdn.bootcss.com/normalize/7.0.0/normalize.min.css" rel="stylesheet">
   <link rel="stylesheet" href="./css/style.css">
+  <link href="https://cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+
   <title>Guild Welfare Mental Health</title>
 </head>
 
 <body>
-
   <!-- Web Header Starts -->
   <div class="web_header">
     <div class="header_icon">
@@ -19,61 +21,86 @@
       <p id="header_part1">GUILD WELFARE</p>
       <p id="header_part2">MENTAL HEALTH DIRECTORY</p>
     </div>
-    <!-- Web Header Ends -->
+    <!-- Web Header Ends  -->
   </div>
+
+  <!-- Scroll To Top Button -->
+  <button onclick="topFunction()" id="myBtn" title="Go to top"><i class="fa fa-arrow-circle-up"></i></button>
 
 
   <!-- Question Box -->
   <div class="question-box">
 
-    <div id="q1" class="question">
+    <a href="#" id="q1"></a>
+    <div class="question animate-bottom">
       <p>Are you (or someone you know) experiencing problems with your (their) mental wellbeing and are looking for support? </p>
-      <button class="button" onClick="smoothScroll('q2')">Yes</button>
+      <div class="button-box">
+        <button id="q1Y" class="button" onclick="smoothScroll('q2');changeColor('q1Y')"> Yes </button>
+      </div>
     </div>
 
-    <div id="q2" class="question">
+    <a href="#" id="q2"></a>
+    <div id="q2_div" class="question">
       <p>Are you (or someone you know) currently facing an emergency or crisis situation, or is there the possibility that immediate harm could come to yourself (or others)?</p>
-      <button class="button" onClick="smoothScroll('crisis_supports')">Yes</button>
-      <button class="button" onClick="smoothScroll('q3')">No</button>
+      <div class="button-box">
+        <button class="button" id="q2Y" onClick="smoothScroll('crisis_supports');changeColor('q2Y')">Yes</button>
+        <button class="button" id="q2N" onClick="smoothScroll('q3');changeColor('q2N')">No</button>
+      </div>
     </div>
 
-    <div id="q3" class="question">
+    <a href="#" id="q3"></a>
+    <div id="q3_div" class="question">
       <p>Are you looking for support services for general or specific mental health issues?</p>
-      <button class="button" onClick="smoothScroll('q4');">General</button>
-      <button class="button" onClick="smoothScroll('q5');">Specific</button>
+      <div class="button-box">
+        <button class="button" id="q3_1" onClick="smoothScroll('q4');changeColor('q3_1')">General</button>
+        <button class="button" id="q3_2" onClick="smoothScroll('q5');changeColor('q3_2')">Specific</button>
+      </div>
     </div>
 
-    <div id="q4" class="question">
+    <a href="#" id="q4"></a>
+    <div id="q4_div" class="question">
       <p>Are you looking for services on-campus, off-campus or online?</p>
-      <button class="button" onClick="smoothScroll('on_campus');">On-Campus</button>
-      <button class="button" onClick="smoothScroll('off_campus');">Off-Campus</button>
-      <button class="button" onClick="smoothScroll('online');">Online</button>
+      <div class="button-box">
+        <button class="button" id="q4_1" onClick="smoothScroll('on_campus',);changeColor('q4_1')">On-Campus</button>
+        <button class="button" id="q4_2" onClick="smoothScroll('off_campus');changeColor('q4_2')">Off-Campus</button>
+        <button class="button" id="q4_3" onClick="smoothScroll('online');changeColor('q4_3')">Online</button>
+      </div>
     </div>
 
-    <div id="q5" class="question">
+    <a href="#" id="q5"></a>
+    <div id="q5_div" class="question">
       <p>What specific mental health issue(s) are you concerned about?</p>
-      <button class="button" onClick="function_q5('depression');">Depression/Anxiety</button>
-      <button class="button" onClick="function_q5('trauma');">Trauma/PTSD/Assault</button>
-      <button class="button" onClick="function_q5('eating');">Eating/Weight-related Disorders</button>
-      <button class="button" onClick="function_q5('alcohol');">Alcohol And Other Drugs</button>
-      <button class="button" onClick="function_q5('LGBTIQA');">LGBTIQA</button>
-      <button class="button" onClick="function_q5('relationships');">Relationships</button>
-      <button class="button" onClick="function_q5('wellbeing');">General Wellbeing/Health</button>
-      <button class="button" onClick="function_q5('schizophrenia');">Schizophrenia</button>
-      <button class="button" onClick="function_q5('personality');">Personality Disorders</button>
+      <div class="button-box">
+        <button class="button" id="q5_1" onClick="function_q5('depression');changeColor('q5_1')">Depression/Anxiety</button>
+        <button class="button" id="q5_2" onClick="function_q5('trauma');changeColor('q5_2')">Trauma/PTSD/Assault</button>
+        <button class="button" id="q5_3" onClick="smoothScroll('off_eating');changeColor('q5_3')">Eating/Weight-related Disorders</button>
+        <button class="button" id="q5_4" onClick="function_q5('alcohol');changeColor('q5_4')">Alcohol And Other Drugs</button>
+        <button class="button" id="q5_5" onClick="function_q5('LGBTIQA');changeColor('q5_5')">LGBTIQA+</button>
+        <button class="button" id="q5_6" onClick="function_q5('relationships');changeColor('q5_6')">Relationships</button>
+        <button class="button" id="q5_7" onClick="function_q5('wellbeing');changeColor('q5_7')">General Wellbeing/Health</button>
+        <button class="button" id="q5_8" onClick="smoothScroll('off_schizophrenia');changeColor('q5_8')">Schizophrenia</button>
+        <button class="button" id="q5_9" onClick="smoothScroll('off_personality');changeColor('q5_9')">Personality Disorders</button>
+      </div>
     </div>
 
-    <div id="q6" class="question">
+    <a href="#" id="q6"></a>
+    <div id="q6_div" class="question">
       <p>Are you looking for services off-campus or online?</p>
-      <button class="button" onClick="function_q6('Off-campus');">Off-campus</button>
-      <button class="button" onClick="function_q6('Online');">Online</button>
-
+      <div class="button-box">
+        <button class="button" id="q6_1" onClick="function_q6('Off-campus');changeColor('q6_1')">Off-campus</button>
+        <button class="button" id="q6_2" onClick="function_q6('Online');changeColor('q6_2')">Online</button>
+      </div>
     </div>
     <!-- Question Box Ends -->
   </div>
 
   <!-- Crisis Supports Part Starts -->
-  <div id="crisis_supports" class="content">
+  <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+  <a href="#" id="crisis_supports"></a>
+  <div class="center-align">
+    <header id="crisis_title" class="lv1title"><b>Crisis Supports</b></header>
+  </div>
+  <div id="crisis_supports_div"  class="content">
     <ul>
       <li>Lifeline:<b>13 11 14</b></li>
       <li>Mental Health Emergency Response Line: <b>1300 555 788 (Metro)</b></li>
@@ -85,9 +112,11 @@
     </ul>
     <!-- Crisis Supports Part Ends -->
   </div>
+  <br><br>
 
   <!-- On-Campus Starts -->
-  <div id="on_campus">
+  <a href="#" id="on_campus"></a>
+  <div id="on_campus_div">
     <div class="center-align">
       <header class="lv1title"><b>On Campus Services</b></header>
     </div>
@@ -226,6 +255,7 @@
       <header class="lv1title">OFF CAMPUS SERVICES</header>
     </div>
 
+    <a href="#" id="off_depression"></a>
     <h1 class="lv2title"><b>DEPRESSION/ANXIETY</b></h1>
     <h2 class="lv3title"><b>FREE/LOW COST SERVICES</b></h2>
     <h2 class="lv4title">CURTIN UNIVERSITY ADULT PSYCHOLOGY CLINIC</h2>
@@ -257,23 +287,6 @@
         </div>
       </div>
     </div>
-
-    <!-- <div class="row">
-      <div id="mood_management" class="col l4 s12">
-        <div class="card-box">
-          <ul class="card-list">
-            <li class="sub_header">
-              <h2>CURTIN UNIVERSITY ADULT PSYCHOLOGY CLINIC</h2></li>
-            <li>Mood Management Program:<br />An 8-week group program for the treatment of anxiety and depression in adults. The group is based on cognitive behaviour therapy (CBT) and includes such things as learning relaxation skills, how to challenge unhelpful thinking and other strategies.<br />Obsessive-Compulsive Disorder (OCD) Treatment Program:<br />A specialist OCD treatment program o ering the latest evidence-based treatments for OCD to clients.<br />Standard consultations cost $45, Group programs cost $25 and Cognitive assessments cost $255.</li>
-            <li class="blue"><i><b>PH: 9266 1717</b></i></li>
-            <li class="blue"><i><b>WEB: <a href="https://healthsciences.curtin.edu.au/our-clinics/adult-psychology-clinic" target="_blank">https://healthsciences.curtin.edu.au/our-clinics/adult-psychology-clinic</a></b></i></li>
-            <li class="blue"><i><b>Email:<a href="mailto:curtinclinics404@curtin.edu.au">curtinclinics404@curtin.edu.au</a></b></i></li>
-          </ul>
-        </div>
-      </div>
-    </div> -->
-
-
 
     <br />
     <h2 class="lv4title">CENTRE FOR CLINICAL INTERVENTIONS &nbsp (ALL SERVICES ARE FREE)</h2>
@@ -371,6 +384,7 @@
 
 
     <br><br>
+    <a href="#" id="off_trauma"></a>
     <h1 class="lv2title"><b>TRAUMA/PTSD/ASSAULT</b></h1>
     <h2 class="lv3title"><b>FREE/LOW COST SERVICES</b></h2>
     <h2 class="lv4title">ANGELHANDS</h2>
@@ -450,6 +464,7 @@
     </div>
 
     <br><br>
+    <a href="#" id="off_eating"></a>
     <h1 class="lv2title"><b>EATING/WEIGHT-RELATED DISORDERS</b></h1>
     <h2 class="lv3title"><b>FREE/LOW COST SERVICES</b></h2>
     <h2 class="lv4title">CENTRE FOR CLINICAL INTERVENTIONS</h2>
@@ -513,7 +528,7 @@
               <h2>Day Patient Program</h2></li>
             <li>This program is suitable for patients 16+ with less severe eating disorders, or to reinforce gains made in a recent inpatient stay for an eating disorder.</li>
             <li class="blue"><i><b>PH: 9346 6801</b></i></li>
-            <li class="blue"><i><b>WEB: <a href="https://hollywoodclinic.com.au/Our-Programs/Eating-Disorder-Programs" target="_blank">Click Here</a></b></i></li>
+            <li class="blue"><i><b>WEB: <a href="http://www.hollywoodclinic.com.au/" target="_blank">Click Here</a></b></i></li>
           </ul>
         </div>
       </div>
@@ -525,7 +540,7 @@
               <h2>Inpatient Program</h2></li>
             <li>This inpatient service is suitable for patients 16+ who may not have responded well to outpatient therapy and require more intensive therapy.<br />Please consult private health insurance whether services are covered.</li>
             <li class="blue"><i><b>PH: 9346 6801</b></i></li>
-            <li class="blue"><i><b>WEB: <a href="https://hollywoodclinic.com.au/Our-Programs/Eating-Disorder-Programs" target="_blank">Click Here</a></b></i></li>
+            <li class="blue"><i><b>WEB: <a href="http://www.hollywoodclinic.com.au/" target="_blank">Click Here</a></b></i></li>
           </ul>
         </div>
       </div>
@@ -569,6 +584,7 @@
 
 
     <br><br>
+    <a href="#" id="off_alcohol"></a>
     <h1 class="lv2title"><b>ALCOHOL AND OTHER DRUGS</b></h1>
     <h2 class="lv3title"><b>FREE/LOW COST SERVICES</b></h2>
 
@@ -658,6 +674,7 @@
     </div>
 
     <br><br>
+    <a href="#" id="off_LGBTIQA"></a>
     <h1 class="lv2title"><b>SERVICES SPECIFICALLY FOR LGBTIQA+ STUDENTS</b></h1>
     <h2 class="lv3title"><b>FREE/LOW COST SERVICES</b></h2>
     <h2 class="lv4title">QLIFE</h2>
@@ -726,6 +743,7 @@
     </div>
 
     <br><br>
+    <a href="#" id="off_relationships"></a>
     <h1 class="lv2title"><b>relationships</b></h1>
     <h2 class="lv3title"><b>FREE/LOW COST SERVICES</b></h2>
     <h2 class="lv4title">RELATIONSHIPS AUSTRALIA</h2>
@@ -761,6 +779,7 @@
     </div>
 
     <br><br>
+    <a href="#" id="off_wellbeing"></a>
     <h1 class="lv2title"><b>general wellbeing/health</b></h1>
     <h2 class="lv4title">HEADSPACE</h2>
 
@@ -856,6 +875,7 @@
     </div>
 
     <br><br>
+    <a href="#" id="off_schizophrenia"></a>
     <h1 class="lv2title"><b>schizophrenia</b></h1>
     <h2 class="lv3title"><b>FREE/LOW COST SERVICES</b></h2>
     <h2 class="lv4title">DEPARTMENT OF HEALTH, GOVERNMENT OF WESTERN AUSTRALIA- YOUTH AXIS</h2>
@@ -944,6 +964,7 @@
     </div>
 
     <br><br>
+    <a href="#" id="off_personality"></a>
     <h1 class="lv2title"><b>personality disorders</b></h1>
     <h2 class="lv3title"><b>FREE/LOW COST SERVICES</b></h2>
     <h2 class="lv4title">CENTRE FOR CLINICAL INTERVENTIONS</h2>
@@ -988,7 +1009,8 @@
             <li class="sub_header">
               <h2>Dialectical Behaviour Therapy (DBT) Programs and DBT Skills Groups</h2></li>
             <li>The DBT Programs provide services for adults (18+), with a diagnosis of Borderline Personality Disorder who live in the north and some south catchment areas of Perth’s metropolitan areas (Fremantle, Rockingham/Kwinana, Armadale, Joondalup
-              /Clarkson).</li>
+              /Clarkson).
+            </li>
             <li class="blue"><i><b>PH: 9398 6600 &nbsp - Armadale Mental Health Service<br />PH: 9431 3400 &nbsp - Fremantle Mental Health Service<br />PH: 9304 6200 &nbsp - Clarkson Community Mental Youth Service<br />PH: 9528 0600 &nbsp - Peel & Rockingham Kwinana Mental Health Service<br />PH: 9347 5700 &nbsp - Swan Mental Health Service</b></i></li>
             <li class="blue"><i><b>WEB: <a href="http://projectairstrategy.org/servicedirectory/waservicedirectory/index.html" target="_blank">Click Here</a></b></i></li>
           </ul>
@@ -1038,14 +1060,15 @@
           <ul class="card-list">
             <li class="sub_header">
               <h2>Dialectical Behaviour Therapy (DBT) Programs</h2></li>
-            <li>ODialectical Behaviour Therapy (DBT) is an e ective treatment for people experiencing frequent and intense changes in emotional state, often leading to self- damaging behaviours.<br />Please consult private health insurance whether services are covered.</li>
+            <li>ODialectical Behaviour Therapy (DBT) is an e ective treatment for people experiencing frequent and intense changes in emotional state, often leading to self- damaging behaviours.<br />Please consult private health insurance whether services
+              are covered.</li>
             <li class="blue"><i><b>PH: 9346 6801</b></i></li>
             <li class="blue"><i><b>WEB: <a href="http://hollywoodclinic.com.au/Our-Programs/Dialectical-Behaviour-Therapy" target="_blank">Click Here</a></b></i></li>
           </ul>
         </div>
       </div>
     </div>
-  <!-- Off-campus Ends -->
+    <!-- Off-campus Ends -->
   </div>
 
 
@@ -1055,6 +1078,7 @@
       <header class="lv1title">APPS/WEB BASED SERVICES</header>
     </div>
 
+    <a href="#" id="on_depression"></a>
     <h1 class="lv2title"><b>DEPRESSION/ANXIETY</b></h1>
     <br />
     <div class="row">
@@ -1063,7 +1087,8 @@
           <ul class="card-list">
             <li class="sub_header">
               <h2>BEYONDBLUE</h2></li>
-            <li>Beyondnow app:<br />A FREE suicide safety planning app. Suicide safety planning involves creating a structured plan – ideally with support from your health professional or someone you trust – that you work through when you’re experiencing suicidal thoughts, feelings, distress or crisis.<br />Available to download for FREE from the Apple Store or Google Play. BeyondNow is also available to use online.</li>
+            <li>Beyondnow app:<br />A FREE suicide safety planning app. Suicide safety planning involves creating a structured plan – ideally with support from your health professional or someone you trust – that you work through when you’re experiencing
+              suicidal thoughts, feelings, distress or crisis.<br />Available to download for FREE from the Apple Store or Google Play. BeyondNow is also available to use online.</li>
             <li class="blue"><i><b>WEB: <a href="http://beyondblue.org.au/get-support/beyondnow-suicide-safety-planning/create-beyondnow-safety-plan" target="_blank">Click Here</a></b></i></li>
           </ul>
         </div>
@@ -1200,6 +1225,7 @@
     </div>
 
     <br>
+    <a href="#" id="on_trauma"></a>
     <h1 class="lv2title"><b>trauma/ptsd/assault</b></h1>
     <br>
     <div class="row">
@@ -1216,6 +1242,7 @@
     </div>
 
     <br>
+    <a href="#" id="on_relationships"></a>
     <h1 class="lv2title"><b>relationships</b></h1>
     <br>
     <div class="row">
@@ -1232,6 +1259,7 @@
     </div>
 
     <br>
+    <a href="#" id="on_alcohol"></a>
     <h1 class="lv2title"><b>alcohol and other drugs</b></h1>
     <br>
     <div class="row">
@@ -1259,6 +1287,7 @@
     </div>
 
     <br>
+    <a href="#" id="on_wellbeing"></a>
     <h1 class="lv2title"><b>general wellbeing/health (the more entry level/first point of contact psychological service)</b></h1>
     <br>
     <div class="row">
@@ -1298,6 +1327,7 @@
     </div>
 
     <br>
+    <a href="#" id="on_LGBTIQA"></a>
     <h1 class="lv2title"><b>services specifically designed for lgbtqia+ students</b></h1>
     <br>
     <div class="row">
@@ -1314,18 +1344,14 @@
     </div>
 
 
-  <!-- APPS/WEB Based Services ends -->
+    <!-- APPS/WEB Based Services ends -->
   </div>
 
 
 
   <script src="./js/zenscroll-min.js"></script>
-  <script>
-    function smoothScroll(parent) {
-      var id = document.getElementById(parent);
-      zenscroll.to(id);
-    }
-  </script>
+  <script src="./js/welfare.js"></script>
+
 </body>
 
 </html>
