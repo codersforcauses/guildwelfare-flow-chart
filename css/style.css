@@ -349,6 +349,10 @@ a {
 @media only screen and (max-width:1000px){
   .s12{width:100%}
   .card-list{height:auto}
+  .button{
+    height:auto;
+    margin-bottom:8px;
+  }
   #online .card-list{height:auto}
 }
 
